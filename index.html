@@ -1,13 +1,20 @@
+<!-- Define o tipo do documento como HTML5 e idioma inglês -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <!-- Configurações básicas do documento -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon do projeto -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Interactive rating component</title>
+  <!-- Importa Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Estilos personalizados -->
   <style>
+    /* Componente de atribuição fixo no rodapé */
     .attribution {
       font-size: 11px;
       text-align: center;
@@ -23,16 +30,22 @@
       color: hsl(228, 45%, 44%);
     }
 
+    /* Classe para esconder elementos */
     .hidden {
       display: none;
     }
   </style>
 </head>
 
+<!-- Corpo da página centralizado com fundo escuro -->
+
 <body class="flex items-center justify-center min-h-screen bg-gray-900 text-white">
 
+  <!-- Card de avaliação inicial -->
   <div id="rating-state" class="p-6 max-w-xs mx-auto bg-gray-800 rounded-2xl shadow-lg space-y-4">
+    <!-- Cabeçalho com ícone e texto -->
     <div class="flex flex-col items-start space-y-4">
+      <!-- Ícone de estrela -->
       <div class="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full">
         <img class="w-5 h-5" src="./images/icon-star.svg" alt="Star Icon">
       </div>
@@ -40,6 +53,7 @@
       <p class="text-sm text-gray-400">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
     </div>
 
+    <!-- Grupo de botões de avaliação -->
     <div class="flex justify-between space-x-1">
       <button data-value="1" class="w-10 h-10 flex items-center justify-center text-gray-300 bg-gray-700 rounded-full hover:bg-orange-500 hover:text-white focus:outline-none">1</button>
       <button data-value="2" class="w-10 h-10 flex items-center justify-center text-gray-300 bg-gray-700 rounded-full hover:bg-orange-500 hover:text-white focus:outline-none">2</button>
@@ -50,16 +64,18 @@
     <button id="submit-button" class="w-full py-2 mt-4 text-sm text-white bg-orange-500 rounded-full hover:bg-white hover:text-black focus:outline-none transition-colors">Submit</button>
   </div>
 
+  <!-- Card de agradecimento (inicialmente oculto) -->
   <div id="thank-you-state" class="hidden p-6 max-w-xs mx-auto bg-gray-800 rounded-2xl shadow-lg space-y-4 text-center">
     <img class="mx-auto w-24" src="./images/illustration-thank-you.svg" alt="Thank You Illustration">
     <div class="space-y-2">
       <p id="selected-rating" class="text-orange-400">You selected <span id="rating">--</span> out of 5</p>
       <h1 class="text-xl font-bold">Thank you!</h1>
-      <p class="text-gray-400">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+      <p class="text-gray-400">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
     </div>
   </div>
 
   <script src="script.js"></script>
+  <!-- Rodapé com atribuição -->
   <div class="attribution text-center py-4 bg-gray-800 text-white">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-300">Frontend Mentor</a>.
     Coded by <a href="#" class="text-blue-300">Your Name Here</a>.
